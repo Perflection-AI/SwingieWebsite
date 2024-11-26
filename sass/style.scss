@@ -159,6 +159,7 @@ h4 {
 
 #fh5co-header {
 	// position: relative;
+	color: black;
 	position: absolute;
 	z-index: 99;
 	width: 100%;
@@ -215,10 +216,11 @@ h4 {
 		li {
 			a {
 				font-family: $font-primary;
-				color: rgba(255,255,255,.5);
+				color: black !important;
 				// color: #dadada;
 				position: relative;
 				span {
+					color: black !important;
 					position: relative;
 					display: block;
 					padding-bottom: 2px;
@@ -246,7 +248,7 @@ h4 {
 				&:hover {
 					// color: $brand-primary;
 					color: $brand-white;
-					// color: rgba(255,255,255,1);
+					color: black;
 					span {
 						&:before {
 							visibility: visible;
@@ -262,6 +264,7 @@ h4 {
 			}
 			&.active {
 				a {
+					color: rgba(0,0,0,.5);
 					background: transparent;
 					background: none;
 					color: $brand-white;
@@ -277,6 +280,7 @@ h4 {
 		}
 	}
 	.navbar-brand {
+		color: rgba(0,0,0,.5);
 		float: left;
 		display: block;
 		font-size: 30px;
