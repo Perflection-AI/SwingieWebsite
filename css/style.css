@@ -323,7 +323,7 @@ body {
 #fh5co-press,
 #fh5co-product-screenshots,
 #fh5co-tour {
-  padding: 7em 0;
+  padding: 2em 0;
 }
 @media screen and (max-width: 480px) {
   #fh5co-our-services,
@@ -334,7 +334,7 @@ body {
   #fh5co-press,
   #fh5co-product-screenshots,
   #fh5co-tour {
-    padding: 5em 0;
+    padding: 2em 0;
   }
 }
 
@@ -545,6 +545,29 @@ body {
   background: #f4f4f4;
 }
 
+#fh5co-our-services .row.row-bottom-padded-sm {
+  display: flex; /* Make the row a flex container */
+  flex-wrap: wrap; /* Allow wrapping for smaller screens */
+  justify-content: center; /* Center-align the child elements */
+}
+#fh5co-our-services .col-md-6 {
+  flex: 1 1 50%; /* Ensure both sections take equal width */
+  display: flex; /* Enable flexbox for inner alignment */
+  flex-direction: column; /* Stack content vertically */
+  transition: background-color 500ms; /* Smooth transition for hover effects */
+}
+#fh5co-our-services .col-md-6:hover {
+  background-color: #41902D; /* Green background color on hover */
+}
+#fh5co-our-services .col-md-6 h3 {
+  transition: color 500ms; /* Smooth color transition */
+}
+#fh5co-our-services .col-md-6:hover h3 {
+  color: black; /* Text color change on hover */
+}
+#fh5co-our-services .container {
+  text-align: center;
+}
 #fh5co-our-services .box {
   text-align: center;
   color: #7f7f7f;
