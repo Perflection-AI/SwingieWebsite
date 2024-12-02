@@ -692,7 +692,7 @@ body {
   
 	// Mobile Styling
 	@media (max-width: 768px) {
-	  padding: 60px 0; // Adjust padding for mobile
+	//   padding: 60px 0; // Adjust padding for mobile
 	  .row {
 		flex-direction: column;
 		text-align: center;
@@ -870,150 +870,72 @@ body {
 }
 
 #fh5co-our-services-collaborations {
-
-	.row.row-bottom-padded-sm {
-		display: flex; /* Make the row a flex container */
-		flex-wrap: wrap; /* Allow wrapping for smaller screens */
-		justify-content: center; /* Center-align the child elements */
-	}
-	.col-md-6 {
-		flex: 1 1 50%; /* Ensure both sections take equal width */
-		display: flex; /* Enable flexbox for inner alignment */
-		flex-direction: column; /* Stack content vertically */
-		transition: background-color 500ms; /* Smooth transition for hover effects */
-		transition: transform 0.3s; /* Add hover effect */
-		&:hover {
-		  transform: translateY(-10px); /* Slight lift on hover */
-		}
-	}
-	.col-md-6:hover {
-		background-color: #41902D; /* Green background color on hover */
-	}
-	.col-md-6 h3 {
-		transition: color 500ms; /* Smooth color transition */
-	}
-	  .col-md-6:hover h3 {
-		color: black; /* Text color change on hover */
-	}
+	padding: 80px 0; /* Add more vertical spacing for breathing room */
+	background-color: #f9f9f9;
+  
 	.container {
-		text-align: center;
+	  text-align: center;
 	}
-
-	@media screen and (max-width: 768px) {
-		.col-md-6 {
-		  flex: 1 1 100%; /* Stack sections on small screens */
-		  margin-bottom: 30px;
-		}
+  
+	.section-title {
+	  font-size: 3rem; /* Increase title size */
+	  font-weight: bold;
+	  color: #333;
+	  margin-bottom: 20px;
+	}
+  
+	.section-subtitle {
+	  font-size: 1.25rem; /* Increase subtitle size */
+	  color: #666; /* Slightly darker text for better readability */
+	  margin-bottom: 50px;
+	}
+  
+	.row {
+	  display: flex;
+	  justify-content: center;
+	  align-items: center;
+	  gap: 40px; /* Add spacing between logos */
+	}
+  
+	.logo-container {
+	  display: flex;
+	  justify-content: center; /* Center-align logo horizontally */
+	  align-items: center; /* Center-align logo vertically */
+	  flex: 1 1 30%; /* Ensure logos take equal width */
+	}
+  
+	.collaboration-logo {
+	  max-width: 150px; /* Ensure a consistent logo size */
+	  height: auto; /* Maintain aspect ratio */
+	  transition: transform 0.3s;
+  
+	  &:hover {
+		transform: scale(1.1); /* Zoom-in effect on hover */
 	  }
-	.box {
-		// min-height: 360px;
-		// padding: 30px;
-		// background: $brand-white;
-		text-align: center;
-		color: #7f7f7f;
-		margin-bottom: 70px;
-		position: relative;
-		// clear: both;
-		float: left;
-		width: 100%;
-		@media screen and (max-width: $screen-sm) {
-			min-height: inherit;
-			margin-bottom: 90px;
-		}
-		.icon {
-			width: 85px;
-			height: 85px;
-			margin: 0 auto;
-			// top: -70px;
-			top: 0;
-			margin-top: -70px;
-			margin-bottom: 30px;
-			position: relative;
-			@include border-radius(50%);
-			display: table;
-			text-align: center;
-			> span {
-				display: table-cell;
-				vertical-align: middle;
-				width: 100%;
-				i {
-					position: relative;
-					float: left;		
-					margin-top: 5px;
-					width: 100%;
-					font-size: 40px;
-					color: $brand-white!important;
-					margin: 0;
-					padding: 0;
-				}
-			}
-			&.colored-1 {
-				background: #2aaf67;
-				background: transparent;
-				border: 3px solid #2aaf67;
-				i {
-					color: #2aaf67!important;
-				}
-			}
-			&.colored-2 {
-				background: #00bff3;
-				background: transparent;
-				border: 3px solid #00bff3;
-				i {
-					color: #00bff3!important;
-				}
-			}
-			&.colored-3 {
-				background: #f26522;
-				background: transparent;
-				border: 3px solid #f26522;
-				i {
-					color: #f26522!important;
-				}
-			}
-			&.colored-4 {
-				background: #e52b50;
-				background: transparent;
-				border: 3px solid #e52b50;
-				i {
-					color: #e52b50!important;
-				}
-			}
-			&.colored-5 {
-				background: #2fc5cc;
-				background: transparent;
-				border: 3px solid #2fc5cc;
-				i {
-					color: #2fc5cc!important;
-				}
-			}
-			&.colored-6 {
-				background: #6173f4;
-				background: transparent;
-				border: 3px solid #6173f4;
-				i {
-					color: #6173f4!important;
-				}
-			}
-		}
-		.step-number {
-			font-size: 16px;
-			display: block;
-			color: #d1d1d1;
-			letter-spacing: 2px;
-			text-transform: uppercase;
-			font-weight: 700;
-			margin-bottom: 10px;
-		}
-		h3 {
-			margin: 0 0 20px 0;
-			padding: 0;
-			font-weight: 400;
-			font-size: 20px;
-			color: $brand-darker;
-		}
 	}
-}
+  
+	/* Responsive Design */
+	@media screen and (max-width: 768px) {
+	  .section-title {
+		font-size: 2.5rem;
+	  }
+  
+	  .section-subtitle {
+		font-size: 1rem;
+	  }
+  
+	  .logo-container {
+		flex: 1 1 100%; /* Stack logos on smaller screens */
+		margin-bottom: 20px;
+	  }
+  
+	  .collaboration-logo {
+		max-width: 120px; /* Reduce logo size for smaller screens */
+	  }
+	}
+  }
+  
+  
 #fh5co-our-services {
 
 	background: url('../images/golferman.png') no-repeat center center;
@@ -1040,9 +962,6 @@ body {
 		flex: 1 1 50%; /* Ensure both sections take equal width */
 		display: flex; /* Enable flexbox for inner alignment */
 		flex-direction: column; /* Stack content vertically */
-	}
-	.col-md-6:hover {
-		background-color: #41902D; /* Green background color on hover */
 	}
 	.col-md-6 h3 {
 		transition: color 500ms; /* Smooth color transition */
@@ -1963,3 +1882,110 @@ body {
   -webkit-animation-fill-mode: both;
   animation-fill-mode: both;
 }
+
+/* Contact Page Styles */
+.contact-page {
+	padding: 60px 0; /* Top and bottom padding */
+	background-color: #f9f9f9; /* Light background color */
+  }
+  
+  .contact-page .container {
+	max-width: 1200px;
+	margin: 0 auto;
+  }
+  
+  .contact-info {
+	list-style: none;
+	padding: 0;
+	font-size: 1.2rem;
+	color: #333;
+  
+	li {
+	  margin-bottom: 15px;
+	  display: flex;
+	  align-items: center;
+  
+	  i {
+		margin-right: 10px;
+		font-size: 1.5rem;
+		color: #41902D; /* Green icon color */
+	  }
+	}
+  }
+  
+  form {
+	.form-group {
+	  margin-bottom: 20px;
+  
+	  label {
+		display: block;
+		font-size: 1rem;
+		color: #333;
+		margin-bottom: 5px;
+	  }
+  
+	  input,
+	  textarea {
+		width: 100%;
+		padding: 10px;
+		border: 1px solid #ccc;
+		border-radius: 5px;
+		font-size: 1rem;
+		color: #333;
+	  }
+  
+	  input:focus,
+	  textarea:focus {
+		outline: none;
+		border-color: #41902D; /* Green focus border */
+		box-shadow: 0 0 5px rgba(65, 144, 45, 0.3); /* Green glow */
+	  }
+	}
+  
+	.btn-submit {
+	  background-color: #41902D;
+	  color: #fff;
+	  border: none;
+	  padding: 10px 20px;
+	  font-size: 1rem;
+	  font-weight: bold;
+	  text-transform: uppercase;
+	  border-radius: 5px;
+	  cursor: pointer;
+	  transition: background-color 0.3s;
+  
+	  &:hover {
+		background-color: #2e7a22; /* Darker green */
+	  }
+	}
+  }
+  
+  /* Responsive Design */
+  @media (max-width: 768px) {
+	.contact-info {
+	  font-size: 1rem;
+  
+	  li {
+		margin-bottom: 10px;
+  
+		i {
+		  font-size: 1.2rem;
+		}
+	  }
+	}
+  
+	form {
+	  .form-group {
+		input,
+		textarea {
+		  font-size: 0.9rem;
+		}
+	  }
+  
+	  .btn-submit {
+		font-size: 0.9rem;
+		padding: 8px 15px;
+	  }
+	}
+  }
+  
