@@ -751,7 +751,7 @@ body {
 }
 
 #fh5co-our-services-collaborations {
-  padding: 80px 0; /* Add more vertical spacing for breathing room */
+  padding: 80px 0;
   background-color: #f9f9f9;
   /* Responsive Design */
 }
@@ -759,49 +759,62 @@ body {
   text-align: center;
 }
 #fh5co-our-services-collaborations .section-title {
-  font-size: 3rem; /* Increase title size */
+  font-size: 3rem;
   font-weight: bold;
   color: #333;
   margin-bottom: 20px;
 }
 #fh5co-our-services-collaborations .section-subtitle {
-  font-size: 1.25rem; /* Increase subtitle size */
-  color: #666; /* Slightly darker text for better readability */
+  font-size: 1.25rem;
+  color: #666;
   margin-bottom: 50px;
 }
 #fh5co-our-services-collaborations .row {
   display: flex;
-  justify-content: center;
+  justify-content: space-evenly; /* Evenly distribute logos */
   align-items: center;
-  gap: 40px; /* Add spacing between logos */
+  flex-wrap: wrap; /* Allow wrapping on smaller screens */
+  gap: 40px; /* Spacing between items */
 }
 #fh5co-our-services-collaborations .logo-container {
+  flex: 1 1 25%; /* Each logo takes 25% of the row on larger screens */
   display: flex;
-  justify-content: center; /* Center-align logo horizontally */
-  align-items: center; /* Center-align logo vertically */
-  flex: 1 1 30%; /* Ensure logos take equal width */
+  justify-content: center; /* Center logo horizontally */
+  align-items: center; /* Center logo vertically */
+  max-width: 200px; /* Optional: limit the maximum width of each logo */
+  margin: 20px; /* Space around each logo */
 }
 #fh5co-our-services-collaborations .collaboration-logo {
-  max-width: 150px; /* Ensure a consistent logo size */
-  height: auto; /* Maintain aspect ratio */
+  max-width: 150px; /* Consistent logo size */
+  height: auto;
   transition: transform 0.3s;
 }
 #fh5co-our-services-collaborations .collaboration-logo:hover {
-  transform: scale(1.1); /* Zoom-in effect on hover */
+  transform: scale(1.1); /* Zoom effect */
+}
+@media screen and (max-width: 1024px) {
+  #fh5co-our-services-collaborations .logo-container {
+    flex: 1 1 33%; /* Three logos per row */
+  }
 }
 @media screen and (max-width: 768px) {
-  #fh5co-our-services-collaborations .section-title {
-    font-size: 2.5rem;
-  }
-  #fh5co-our-services-collaborations .section-subtitle {
-    font-size: 1rem;
-  }
   #fh5co-our-services-collaborations .logo-container {
-    flex: 1 1 100%; /* Stack logos on smaller screens */
-    margin-bottom: 20px;
+    flex: 1 1 50%; /* Two logos per row */
   }
   #fh5co-our-services-collaborations .collaboration-logo {
-    max-width: 120px; /* Reduce logo size for smaller screens */
+    max-width: 120px; /* Reduce logo size */
+  }
+}
+@media screen and (max-width: 480px) {
+  #fh5co-our-services-collaborations .row {
+    flex-direction: column; /* Stack logos vertically */
+  }
+  #fh5co-our-services-collaborations .logo-container {
+    flex: 1 1 100%; /* Full width for each logo */
+    max-width: 120px; /* Smaller max width for logos */
+  }
+  #fh5co-our-services-collaborations .collaboration-logo {
+    max-width: 100px; /* Further reduce size */
   }
 }
 
