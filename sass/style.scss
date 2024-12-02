@@ -264,7 +264,7 @@ h4 {
 			}
 			&.active {
 				a {
-					color: rgba(0,0,0,.5);
+					color: black;
 					background: transparent;
 					background: none;
 					color: $brand-white;
@@ -286,7 +286,6 @@ h4 {
 		font-size: 30px;
 		font-weight: 400;
 		padding-left: 0;
-		color: $brand-white;
 		span {
 			color: $brand-primary;
 		}
@@ -302,7 +301,8 @@ h4 {
 		margin-top: 0px;
 		top: 0;
 		.navbar-brand {
-			color: $brand-primary;
+			// color: $brand-primary;
+			color: black;
 		}
 		#navbar {
 			li {
@@ -438,7 +438,7 @@ body {
 #fh5co-press,
 #fh5co-product-screenshots,
 #fh5co-tour {
-	padding: 2em 0;
+	padding: 4em 0;
 	@media screen and (max-width: $screen-xs) {
 		padding: 2em 0;
 	}
@@ -723,7 +723,7 @@ body {
 	background: #f4f4f4;
 }
 
-#fh5co-our-services {
+#fh5co-our-services-features {
 
 	.row.row-bottom-padded-sm {
 		display: flex; /* Make the row a flex container */
@@ -735,6 +735,10 @@ body {
 		display: flex; /* Enable flexbox for inner alignment */
 		flex-direction: column; /* Stack content vertically */
 		transition: background-color 500ms; /* Smooth transition for hover effects */
+		transition: transform 0.3s; /* Add hover effect */
+		&:hover {
+		  transform: translateY(-10px); /* Slight lift on hover */
+		}
 	}
 	.col-md-6:hover {
 		background-color: #41902D; /* Green background color on hover */
@@ -748,6 +752,317 @@ body {
 	.container {
 		text-align: center;
 	}
+
+	@media screen and (max-width: 768px) {
+		.col-md-6 {
+		  flex: 1 1 100%; /* Stack sections on small screens */
+		  margin-bottom: 30px;
+		}
+	  }
+	.box {
+		// min-height: 360px;
+		// padding: 30px;
+		// background: $brand-white;
+		text-align: center;
+		color: #7f7f7f;
+		margin-bottom: 70px;
+		position: relative;
+		// clear: both;
+		float: left;
+		width: 100%;
+		@media screen and (max-width: $screen-sm) {
+			min-height: inherit;
+			margin-bottom: 90px;
+		}
+		.icon {
+			width: 85px;
+			height: 85px;
+			margin: 0 auto;
+			// top: -70px;
+			top: 0;
+			margin-top: -70px;
+			margin-bottom: 30px;
+			position: relative;
+			@include border-radius(50%);
+			display: table;
+			text-align: center;
+			> span {
+				display: table-cell;
+				vertical-align: middle;
+				width: 100%;
+				i {
+					position: relative;
+					float: left;		
+					margin-top: 5px;
+					width: 100%;
+					font-size: 40px;
+					color: $brand-white!important;
+					margin: 0;
+					padding: 0;
+				}
+			}
+			&.colored-1 {
+				background: #2aaf67;
+				background: transparent;
+				border: 3px solid #2aaf67;
+				i {
+					color: #2aaf67!important;
+				}
+			}
+			&.colored-2 {
+				background: #00bff3;
+				background: transparent;
+				border: 3px solid #00bff3;
+				i {
+					color: #00bff3!important;
+				}
+			}
+			&.colored-3 {
+				background: #f26522;
+				background: transparent;
+				border: 3px solid #f26522;
+				i {
+					color: #f26522!important;
+				}
+			}
+			&.colored-4 {
+				background: #e52b50;
+				background: transparent;
+				border: 3px solid #e52b50;
+				i {
+					color: #e52b50!important;
+				}
+			}
+			&.colored-5 {
+				background: #2fc5cc;
+				background: transparent;
+				border: 3px solid #2fc5cc;
+				i {
+					color: #2fc5cc!important;
+				}
+			}
+			&.colored-6 {
+				background: #6173f4;
+				background: transparent;
+				border: 3px solid #6173f4;
+				i {
+					color: #6173f4!important;
+				}
+			}
+		}
+		.step-number {
+			font-size: 16px;
+			display: block;
+			color: #d1d1d1;
+			letter-spacing: 2px;
+			text-transform: uppercase;
+			font-weight: 700;
+			margin-bottom: 10px;
+		}
+		h3 {
+			margin: 0 0 20px 0;
+			padding: 0;
+			font-weight: 400;
+			font-size: 20px;
+			color: $brand-darker;
+		}
+	}
+}
+
+#fh5co-our-services-collaborations {
+
+	.row.row-bottom-padded-sm {
+		display: flex; /* Make the row a flex container */
+		flex-wrap: wrap; /* Allow wrapping for smaller screens */
+		justify-content: center; /* Center-align the child elements */
+	}
+	.col-md-6 {
+		flex: 1 1 50%; /* Ensure both sections take equal width */
+		display: flex; /* Enable flexbox for inner alignment */
+		flex-direction: column; /* Stack content vertically */
+		transition: background-color 500ms; /* Smooth transition for hover effects */
+		transition: transform 0.3s; /* Add hover effect */
+		&:hover {
+		  transform: translateY(-10px); /* Slight lift on hover */
+		}
+	}
+	.col-md-6:hover {
+		background-color: #41902D; /* Green background color on hover */
+	}
+	.col-md-6 h3 {
+		transition: color 500ms; /* Smooth color transition */
+	}
+	  .col-md-6:hover h3 {
+		color: black; /* Text color change on hover */
+	}
+	.container {
+		text-align: center;
+	}
+
+	@media screen and (max-width: 768px) {
+		.col-md-6 {
+		  flex: 1 1 100%; /* Stack sections on small screens */
+		  margin-bottom: 30px;
+		}
+	  }
+	.box {
+		// min-height: 360px;
+		// padding: 30px;
+		// background: $brand-white;
+		text-align: center;
+		color: #7f7f7f;
+		margin-bottom: 70px;
+		position: relative;
+		// clear: both;
+		float: left;
+		width: 100%;
+		@media screen and (max-width: $screen-sm) {
+			min-height: inherit;
+			margin-bottom: 90px;
+		}
+		.icon {
+			width: 85px;
+			height: 85px;
+			margin: 0 auto;
+			// top: -70px;
+			top: 0;
+			margin-top: -70px;
+			margin-bottom: 30px;
+			position: relative;
+			@include border-radius(50%);
+			display: table;
+			text-align: center;
+			> span {
+				display: table-cell;
+				vertical-align: middle;
+				width: 100%;
+				i {
+					position: relative;
+					float: left;		
+					margin-top: 5px;
+					width: 100%;
+					font-size: 40px;
+					color: $brand-white!important;
+					margin: 0;
+					padding: 0;
+				}
+			}
+			&.colored-1 {
+				background: #2aaf67;
+				background: transparent;
+				border: 3px solid #2aaf67;
+				i {
+					color: #2aaf67!important;
+				}
+			}
+			&.colored-2 {
+				background: #00bff3;
+				background: transparent;
+				border: 3px solid #00bff3;
+				i {
+					color: #00bff3!important;
+				}
+			}
+			&.colored-3 {
+				background: #f26522;
+				background: transparent;
+				border: 3px solid #f26522;
+				i {
+					color: #f26522!important;
+				}
+			}
+			&.colored-4 {
+				background: #e52b50;
+				background: transparent;
+				border: 3px solid #e52b50;
+				i {
+					color: #e52b50!important;
+				}
+			}
+			&.colored-5 {
+				background: #2fc5cc;
+				background: transparent;
+				border: 3px solid #2fc5cc;
+				i {
+					color: #2fc5cc!important;
+				}
+			}
+			&.colored-6 {
+				background: #6173f4;
+				background: transparent;
+				border: 3px solid #6173f4;
+				i {
+					color: #6173f4!important;
+				}
+			}
+		}
+		.step-number {
+			font-size: 16px;
+			display: block;
+			color: #d1d1d1;
+			letter-spacing: 2px;
+			text-transform: uppercase;
+			font-weight: 700;
+			margin-bottom: 10px;
+		}
+		h3 {
+			margin: 0 0 20px 0;
+			padding: 0;
+			font-weight: 400;
+			font-size: 20px;
+			color: $brand-darker;
+		}
+	}
+}
+#fh5co-our-services {
+
+	background: url('../images/golferman.png') no-repeat center center;
+	background-size: cover; /* Ensure the image covers the entire section */
+	padding: 60px 0; /* Add more padding for better spacing */
+	position: relative;
+
+	&::before {
+	  content: '';
+	  position: absolute;
+	  top: 0;
+	  left: 0;
+	  width: 100%;
+	  height: 100%;
+	  background-color: rgba(63, 127, 49, 0.6); /* Green overlay with 60% opacity */
+	  z-index: 1; /* Place it below the content */
+	}
+	.row.row-bottom-padded-sm {
+		display: flex; /* Make the row a flex container */
+		flex-wrap: wrap; /* Allow wrapping for smaller screens */
+		justify-content: center; /* Center-align the child elements */
+	}
+	.col-md-6 {
+		flex: 1 1 50%; /* Ensure both sections take equal width */
+		display: flex; /* Enable flexbox for inner alignment */
+		flex-direction: column; /* Stack content vertically */
+	}
+	.col-md-6:hover {
+		background-color: #41902D; /* Green background color on hover */
+	}
+	.col-md-6 h3 {
+		transition: color 500ms; /* Smooth color transition */
+	}
+	  .col-md-6:hover h3 {
+		color: black; /* Text color change on hover */
+	}
+	.container {
+		text-align: center;
+		position: relative;
+		z-index: 2; /* Ensure content is above the overlay */
+		color: #fff; /* Ensure text remains visible */
+	}
+
+	@media screen and (max-width: 768px) {
+		.col-md-6 {
+		  flex: 1 1 100%; /* Stack sections on small screens */
+		  margin-bottom: 30px;
+		}
+	  }
 	.box {
 		// min-height: 360px;
 		// padding: 30px;
@@ -1063,14 +1378,134 @@ body {
 }
 
 #footer {
-	padding: 50px 0;
-	color: #7f7f7f;
-	// color: #d6d6d6;
-	.copyright {
-		margin-bottom: 0px;
-		padding-bottom: 0;
+	background-color: #3f7f31; /* Dark green background */
+	color: #e3f0d8; /* Light green text */
+	padding: 50px 20px;
+  
+	.footer-container {
+	  max-width: 1200px;
+	  margin: 0 auto;
 	}
-}
+  
+	.footer-row {
+	  display: flex;
+	  flex-wrap: wrap;
+	  justify-content: space-between;
+	  gap: 20px;
+	}
+  
+	.footer-column {
+	  flex: 1;
+	  min-width: 250px;
+	}
+  
+	.footer-logo {
+	  font-size: 2rem;
+	  font-weight: bold;
+	  color: #e3f0d8;
+	  margin-bottom: 20px;
+	}
+  
+	.social-links {
+	  display: flex;
+	  gap: 10px;
+	  margin-bottom: 20px;
+  
+	  li {
+		list-style: none;
+  
+		a {
+		  color: #e3f0d8;
+		  font-size: 1.5rem;
+		  transition: color 0.3s;
+  
+		  &:hover {
+			color: #a5d27c;
+		  }
+		}
+	  }
+	}
+  
+	.contact-info,
+	.footer-links {
+	  list-style: none;
+	  padding: 0;
+	  margin: 0;
+  
+	  li {
+		margin-bottom: 10px;
+  
+		a {
+		  color: #e3f0d8;
+		  text-decoration: none;
+		  transition: color 0.3s;
+  
+		  &:hover {
+			color: #a5d27c;
+		  }
+		}
+	  }
+	}
+  
+	h3 {
+	  margin-bottom: 20px;
+	  font-size: 1.25rem;
+	  font-weight: bold;
+	}
+  
+	.subscribe-form {
+	  display: flex;
+	  flex-direction: column;
+	  gap: 10px;
+  
+	  input {
+		padding: 10px;
+		font-size: 1rem;
+		border: 1px solid #e3f0d8;
+		border-radius: 5px;
+		background-color: #3f7f31;
+		color: #e3f0d8;
+  
+		&::placeholder {
+		  color: #b5cfaa;
+		}
+	  }
+  
+	  .btn-subscribe {
+		padding: 10px;
+		font-size: 1rem;
+		font-weight: bold;
+		color: #3f7f31;
+		background-color: #a5d27c;
+		border: none;
+		border-radius: 5px;
+		cursor: pointer;
+		transition: background-color 0.3s;
+  
+		&:hover {
+		  background-color: #e3f0d8;
+		}
+	  }
+	}
+  
+	.footer-copyright {
+	  margin-top: 20px;
+	  font-size: 0.9rem;
+	}
+  
+	// Responsive Design
+	@media (max-width: 768px) {
+	  .footer-row {
+		flex-direction: column;
+		text-align: center;
+	  }
+  
+	  .footer-column {
+		margin-bottom: 20px;
+	  }
+	}
+  }
+  
 
 
 .btn {
