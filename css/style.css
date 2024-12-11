@@ -602,7 +602,7 @@ body {
 #home h1 {
   font-family: "Arial", sans-serif; /* Change to your preferred font */
   font-weight: 400; /* Regular font weight */
-  font-size: 3rem; /* Adjust size as needed */
+  font-size: 50px;
   line-height: 1.2; /* Adjust line spacing */
   text-align: left; /* Align text to the left */
   margin-bottom: 20px;
@@ -672,15 +672,33 @@ body {
   background: #f4f4f4;
 }
 
+#fh5co-our-services-features {
+  background-color: #F9FAFB;
+}
 #fh5co-our-services-features h2 {
   color: black;
   font-size: 40px;
   text-align: center; /* Center the section title */
+  margin-top: 80px;
 }
 #fh5co-our-services-features h3 {
-  color: rgba(0, 0, 0, 0.5);
+  margin-top: 0;
+  margin-bottom: 20px;
+  color: #929292;
   font-size: 30px;
   text-align: center; /* Center the section subtitle */
+}
+#fh5co-our-services-features h4 {
+  margin-top: 35px;
+  margin-bottom: 25px;
+  font-size: 20px;
+  color: black;
+  text-align: left;
+}
+#fh5co-our-services-features h5 {
+  font-size: 17px;
+  color: grey;
+  text-align: left;
 }
 #fh5co-our-services-features .row.row-bottom-padded-sm {
   display: flex;
@@ -699,6 +717,9 @@ body {
 #fh5co-our-services-features .col-md-6:hover {
   background-color: #41902d; /* Green background on hover */
   transform: translateY(-10px); /* Slight lift on hover */
+}
+#fh5co-our-services-features .col-md-6:hover h4,
+#fh5co-our-services-features .col-md-6:hover h5 {
   color: white; /* Ensure all text inside turns white */
 }
 #fh5co-our-services-features .col-md-6 .box {
@@ -706,10 +727,7 @@ body {
   width: 100%;
   text-align: center;
   color: #7f7f7f;
-  transition: color 0.3s; /* Ensure smooth text color transition */
-}
-#fh5co-our-services-features .col-md-6 .box:hover {
-  color: white; /* Ensure all text inside changes to white on hover */
+  transition: color 0.3s; /* Smooth text color transition */
 }
 #fh5co-our-services-features .col-md-6 .box img.icon {
   position: absolute;
@@ -725,69 +743,63 @@ body {
   color: black;
   transition: color 0.3s;
 }
-#fh5co-our-services-features .col-md-6 .box h2:hover {
-  color: white; /* Change title color on hover */
-}
 #fh5co-our-services-features .col-md-6 .box h3 {
   font-size: 17px;
   margin: 0;
   color: #7f7f7f;
   transition: color 0.3s;
 }
-#fh5co-our-services-features .col-md-6 .box h3:hover {
-  color: white; /* Change content color on hover */
-}
 @media screen and (max-width: 768px) {
   #fh5co-our-services-features .col-md-6 {
     flex: 1 1 100%; /* Full-width on smaller screens */
     margin-bottom: 20px;
   }
-  #fh5co-our-services-features h2, #fh5co-our-services-features h3 {
+  #fh5co-our-services-features h2,
+  #fh5co-our-services-features h3 {
     text-align: center; /* Ensure title and subtitle stay centered on small screens */
   }
 }
 
 #fh5co-our-services-collaborations {
   padding: 80px 0;
-  background-color: #f9f9f9;
+  background-color: #ffffff;
   /* Responsive Design */
 }
 #fh5co-our-services-collaborations .container {
   text-align: center;
 }
 #fh5co-our-services-collaborations .section-title {
-  font-size: 3rem;
-  font-weight: bold;
-  color: #333;
+  font-size: 40px;
+  color: black;
   margin-bottom: 20px;
 }
 #fh5co-our-services-collaborations .section-subtitle {
-  font-size: 1.25rem;
-  color: #666;
+  font-size: 30px;
+  color: #929292;
   margin-bottom: 50px;
 }
 #fh5co-our-services-collaborations .row {
   display: flex;
   justify-content: space-evenly; /* Evenly distribute logos */
   align-items: center;
-  flex-wrap: wrap; /* Allow wrapping on smaller screens */
-  gap: 40px; /* Spacing between items */
+  gap: 20px; /* Spacing between logos and dividers */
 }
 #fh5co-our-services-collaborations .logo-container {
-  flex: 1 1 25%; /* Each logo takes 25% of the row on larger screens */
   display: flex;
-  justify-content: center; /* Center logo horizontally */
-  align-items: center; /* Center logo vertically */
+  justify-content: center;
+  align-items: center;
+  flex: 1;
   max-width: 200px; /* Optional: limit the maximum width of each logo */
-  margin: 20px; /* Space around each logo */
+  margin: 20px;
 }
 #fh5co-our-services-collaborations .collaboration-logo {
-  max-width: 150px; /* Consistent logo size */
+  max-width: 150px;
   height: auto;
-  transition: transform 0.3s;
 }
-#fh5co-our-services-collaborations .collaboration-logo:hover {
-  transform: scale(1.1); /* Zoom effect */
+#fh5co-our-services-collaborations .divider {
+  width: 1px;
+  height: 60px; /* Slightly smaller than logo height */
+  background-color: #929292; /* Dark grey */
 }
 @media screen and (max-width: 1024px) {
   #fh5co-our-services-collaborations .logo-container {
@@ -795,23 +807,19 @@ body {
   }
 }
 @media screen and (max-width: 768px) {
-  #fh5co-our-services-collaborations .logo-container {
-    flex: 1 1 50%; /* Two logos per row */
+  #fh5co-our-services-collaborations .row {
+    flex-direction: column; /* Stack vertically */
+  }
+  #fh5co-our-services-collaborations .divider {
+    display: none; /* Hide dividers on smaller screens */
   }
   #fh5co-our-services-collaborations .collaboration-logo {
-    max-width: 120px; /* Reduce logo size */
+    max-width: 120px; /* Smaller logo size */
   }
 }
 @media screen and (max-width: 480px) {
-  #fh5co-our-services-collaborations .row {
-    flex-direction: column; /* Stack logos vertically */
-  }
-  #fh5co-our-services-collaborations .logo-container {
-    flex: 1 1 100%; /* Full width for each logo */
-    max-width: 120px; /* Smaller max width for logos */
-  }
   #fh5co-our-services-collaborations .collaboration-logo {
-    max-width: 100px; /* Further reduce size */
+    max-width: 100px;
   }
 }
 
@@ -820,6 +828,14 @@ body {
   background-size: cover; /* Ensure the image covers the entire section */
   padding: 60px 0; /* Add more padding for better spacing */
   position: relative;
+}
+#fh5co-our-services-vission h4 {
+  font-size: 20px;
+  color: white;
+}
+#fh5co-our-services-vission h5 {
+  font-size: 17px;
+  color: white;
 }
 #fh5co-our-services-vission::before {
   content: "";
@@ -1231,9 +1247,10 @@ body {
 }
 
 #footer {
-  background-color: #3f7f31; /* Dark green background */
+  background-color: #1e5e10; /* Dark green background */
   color: #e3f0d8; /* Light green text */
   padding: 50px 20px;
+  text-align: left; /* Align everything to the left */
 }
 #footer .footer-container {
   max-width: 1200px;
@@ -1242,7 +1259,7 @@ body {
 #footer .footer-row {
   display: flex;
   flex-wrap: wrap;
-  justify-content: space-between;
+  justify-content: flex-start; /* Align items to the left */
   gap: 20px;
 }
 #footer .footer-column {
@@ -1259,6 +1276,8 @@ body {
   display: flex;
   gap: 10px;
   margin-bottom: 20px;
+  padding-left: 0;
+  justify-content: flex-start; /* Align social links to the left */
 }
 #footer .social-links li {
   list-style: none;
@@ -1293,8 +1312,13 @@ body {
 }
 #footer h3 {
   margin-bottom: 20px;
-  font-size: 1.25rem;
-  font-weight: bold;
+  font-size: 16px;
+  color: #ffffff;
+}
+#footer a {
+  color: white;
+  margin-bottom: 3px;
+  font-size: 16px;
 }
 #footer .subscribe-form {
   display: flex;
@@ -1302,10 +1326,9 @@ body {
   gap: 10px;
 }
 #footer .subscribe-form input {
-  padding: 10px;
-  font-size: 1rem;
+  padding: 5px;
+  font-size: 1.5rem;
   border: 1px solid #e3f0d8;
-  border-radius: 5px;
   background-color: #3f7f31;
   color: #e3f0d8;
 }
@@ -1313,18 +1336,22 @@ body {
   color: #b5cfaa;
 }
 #footer .subscribe-form .btn-subscribe {
-  padding: 10px;
-  font-size: 1rem;
+  padding: 5px;
+  font-size: 1.5rem;
   font-weight: bold;
-  color: #3f7f31;
+  color: #41902D;
   background-color: #a5d27c;
   border: none;
-  border-radius: 5px;
   cursor: pointer;
   transition: background-color 0.3s;
 }
 #footer .subscribe-form .btn-subscribe:hover {
   background-color: #e3f0d8;
+}
+#footer .footer-logo-img {
+  width: 120px; /* Adjust the width of the logo */
+  height: auto; /* Maintain aspect ratio */
+  margin-bottom: 20px; /* Add spacing below the logo */
 }
 #footer .footer-copyright {
   margin-top: 20px;
@@ -1333,7 +1360,7 @@ body {
 @media (max-width: 768px) {
   #footer .footer-row {
     flex-direction: column;
-    text-align: center;
+    text-align: left; /* Align to the left for smaller screens */
   }
   #footer .footer-column {
     margin-bottom: 20px;
