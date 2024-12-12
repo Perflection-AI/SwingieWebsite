@@ -852,7 +852,7 @@ body {
 		img.icon {
 		  position: absolute;
 		  top: 15px;
-		  left: 15px;
+		  left: 30px;
 		  width: 30px; /* Reduce the size to 60% */
 		  height: auto;
 		}
@@ -943,17 +943,34 @@ body {
 
 	@media screen and (max-width: 768px) {
 		.row {
-			flex-direction: column; /* Stack vertically */
+			flex-direction: row; /* Ensure logos are displayed side by side */
+			justify-content: space-evenly; /* Space logos evenly */
+			align-items: center;
 		}
-
-		.divider {
-			display: none; /* Hide dividers on smaller screens */
+	
+		.logo-container {
+			flex: 1; /* Equal flex space for logos */
+			display: flex;
+			justify-content: center; /* Center-align logos */
+			align-items: center;
+			max-width: 80px; /* Limit logo width for mobile view */
+			margin: 10px;
 		}
-
+	
 		.collaboration-logo {
-			max-width: 120px; /* Smaller logo size */
+			max-width: 60px; /* Smaller size for logos */
+			height: auto; /* Maintain aspect ratio */
+		}
+	
+		.divider {
+			width: 1px; /* Vertical line width */
+			height: 60px; /* Adjust height for alignment */
+			background-color: #929292; /* Dark grey color for divider */
+			margin: 0 10px; /* Add spacing around the divider */
+			display: block; /* Ensure divider is visible */
 		}
 	}
+	
 
 	@media screen and (max-width: 480px) {
 		.collaboration-logo {
@@ -1051,18 +1068,45 @@ body {
 	}
 
 	@media screen and (max-width: 768px) {
-		.col-md-6 {
-		  flex: 1 1 100%; /* Stack sections on small screens */
-		  margin-bottom: 30px;
-		}
 		.custom-container {
-			flex-direction: column; /* Stack blocks vertically */
-		  }
-	  
-		  .block {
-			width: 100%; /* Full-width blocks on mobile */
-		  }
-	  }
+			display: block; /* Stack blocks on mobile */
+			width: 90%;
+			margin: 0 auto; /* Center the container */
+		}
+	
+		.block {
+			display: block;
+			width: 100%;
+			margin-bottom: 30px;
+			background-color: rgba(255, 255, 255, 0.15);
+			padding: 20px;
+			overflow: hidden; /* Clear floats */
+		}
+	
+		.block img.icon {
+			float: left; /* Float image to the left */
+			width: 50px; /* Adjust image size */
+			margin-right: 20px; /* Add spacing between image and text */
+		}
+	
+		.block h4 {
+			display: inline-block; /* Allow h4 to share the line */
+			margin: 5px 0 0 0; /* Place h4 right below the image */
+			font-size: 18px;
+			color: white;
+			text-align: left;
+			clear: left; /* Ensure h4 starts below the floated image */
+		}
+	
+		.block h5 {
+			margin: 0;
+			font-size: 16px;
+			color: white;
+			text-align: left;
+			padding-left: 80px; /* Add padding to leave space for image and h4 */
+		}
+	}
+	
 	.box {
 		// min-height: 360px;
 		// padding: 30px;
@@ -1075,7 +1119,7 @@ body {
 		width: 100%;
 		@media screen and (max-width: $screen-sm) {
 			min-height: inherit;
-			margin-bottom: 90px;
+			margin-bottom: 10px;
 		}
 		.icon {
 			width: 60px;
@@ -1427,7 +1471,25 @@ body {
 		}
 	  }
 	}
-
+	.subscribe-newsletter {
+		list-style: none;
+		padding: 0;
+		margin: 0;
+  
+		li {
+		  margin: 0;
+  
+		  a {
+			color: #e3f0d8;
+			text-decoration: none;
+			transition: color 0.3s;
+  
+			&:hover {
+			  color: #a5d27c;
+			}
+		  }
+		}
+	  }
 	.contact-info,
 	.footer-links {
 	  list-style: none;
@@ -1464,10 +1526,11 @@ body {
 	.subscribe-form {
 	  display: flex;
 	  flex-direction: column;
-	  gap: 10px;
+	//   gap: 10px;
 
 	  input {
 		padding: 5px;
+		margin-bottom: 20px;
 		font-size: 1.5rem;
 		border: 1px solid #e3f0d8;
 		background-color: #3f7f31;
@@ -1482,8 +1545,8 @@ body {
 		padding: 5px;
 		font-size: 1.5rem;
 		font-weight: bold;
-		color: #41902D;
-		background-color: #a5d27c;
+		color: white;
+		background-color: #41902D;
 		border: none;
 		cursor: pointer;
 		transition: background-color 0.3s;
@@ -1993,6 +2056,9 @@ body {
 	color: #333;
   
 	li {
+		img {
+			padding-right: 5px;
+		}
 	  margin-bottom: 15px;
 	  display: flex;
 	  align-items: center;
