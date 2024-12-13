@@ -27,24 +27,26 @@
   <!-- Navbar -->
   <header role="banner" id="fh5co-header">
     <div class="container">
-      <nav class="navbar navbar-default">
-        <div class="navbar-header">
-          <a href="#" class="js-fh5co-nav-toggle fh5co-nav-toggle" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar"><i></i></a>
-          <a class="navbar-brand" href="index.html">Swingie<span>.</span></a>
-        </div>
-        <div id="navbar" class="navbar-collapse collapse">
-          <ul class="nav navbar-nav navbar-right">
-            <li><a href="index.html" data-nav-section="home"><span>Home</span></a></li>
-            <li><a href="index.html#vision-mission" data-nav-section="vision-mission"><span>Vision/Mission</span></a></li>
-            <li><a href="index.html#features" data-nav-section="features"><span>Features</span></a></li>
-            <li><a href="index.html#ai-in-action" data-nav-section="ai-in-action"><span>AI in Action</span></a></li>
-            <li><a href="index.html#pricing" data-nav-section="pricing"><span>Pricing</span></a></li>
-            <li class="active"><a href="contact.html"><span>Contact Us</span></a></li>
-          </ul>
-        </div>
-      </nav>
+      <!-- <div class="row"> -->
+        <nav class="navbar navbar-default">
+          <div class="navbar-header">
+            <!-- Mobile Toggle Menu Button -->
+        <a href="#" class="js-fh5co-nav-toggle fh5co-nav-toggle" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar"><i></i></a>
+        <a class="navbar-brand" href="index.html">
+          <img src="images/SwingieLogo.svg" alt="Swingie Logo" style="height: 40px;">
+        </a>
+          </div>
+          <div id="navbar" class="navbar-collapse collapse">
+            <ul class="nav navbar-nav navbar-right">
+              <li class="active"><a href="#" data-nav-section="home"><span>Home</span></a></li>
+              <li><a href="#" data-nav-section="contact-info"><span>Contact Information</span></a></li>
+        <li><a href="contact.html"><span>Contact Us</span></a></li>
+              
+            </ul>
+          </div>
+        </nav>
     </div>
-  </header>
+</header>
 
   <!-- Contact Section -->
   <div class="contact-page">
@@ -54,10 +56,10 @@
         <div class="col-md-6">
           <h2>Contact Information</h2>
           <ul class="contact-info">
-            <li><i class="icon-link"></i> Link</li>
-            <li><i class="icon-envelope"></i> Email</li>
-            <li><i class="icon-phone"></i> Phone</li>
-            <li><i class="icon-location"></i> Address</li>
+            <li><a href="#"><img src="images/contactPage/Link.svg" alt="Link" class="icon-Link">Link</a></li>
+            <li><a href="#"><img src="images/contactPage/Email.svg" alt="Email" class="icon-Email">Email</a></li>
+            <li><a href="#"><img src="images/contactPage/PhonePic.svg" alt="Phone" class="icon-Phone">Phone</a></li>
+            <li><a href="#"><img src="images/contactPage/Address.svg" alt="Address" class="icon-Address">Address</a></li>
           </ul>
         </div>
         <!-- Get in Touch Form -->
@@ -78,7 +80,7 @@
             </div>
             <div class="form-group">
               <label for="message">Message *</label>
-              <textarea id="message" name="message" rows="5" required></textarea>
+              <textarea id="message" name="message" rows="5" placeholder="Say something about us" required></textarea>
             </div>
             <button type="submit" class="btn-submit">Send Message</button>
           </form>
@@ -88,60 +90,69 @@
   </div>
 
   <!-- Footer -->
-  <footer id="footer" role="contentinfo">
-    <div class="footer-container">
-      <div class="footer-row">
-        <!-- Logo and Social Links -->
-        <div class="footer-column">
-          <h2 class="footer-logo">Swingie</h2>
-          <ul class="social-links">
-            <li><a href="#"><i class="icon-facebook"></i></a></li>
-            <li><a href="#"><i class="icon-instagram"></i></a></li>
-            <li><a href="#"><i class="icon-twitter"></i></a></li>
-            <li><a href="#"><i class="icon-github"></i></a></li>
-            <li><a href="#"><i class="icon-discord"></i></a></li>
-          </ul>
-          <ul class="contact-info">
-            <li><a href="#">Link</a></li>
-            <li><a href="#">Email</a></li>
-            <li><a href="#">Address</a></li>
-          </ul>
-          <p class="footer-copyright">
-            © 2024 Swingie. All Rights Reserved.<br />
-            Designed by Tiffany Ling
-          </p>
-        </div>
-        <!-- Navigation Links -->
-        <div class="footer-column">
-          <h3>Navigation</h3>
-          <ul class="footer-links">
-            <li><a href="index.html#home">Home</a></li>
-            <li><a href="index.html#vision-mission">Vision/Mission</a></li>
-            <li><a href="index.html#features">Features</a></li>
-            <li><a href="index.html#ai-in-action">AI in Action</a></li>
-            <li><a href="index.html#pricing">Pricing</a></li>
-            <li><a href="contact.html">Contact Us</a></li>
-          </ul>
-        </div>
-        <!-- Legal Links -->
-        <div class="footer-column">
-          <h3>Legal</h3>
-          <ul class="footer-links">
-            <li><a href="#">Privacy & Policy</a></li>
-            <li><a href="#">Terms & Conditions</a></li>
-          </ul>
-        </div>
-        <!-- Subscribe Section -->
-        <div class="footer-column">
-          <h3>Subscribe to Our Newsletter</h3>
-          <form class="subscribe-form">
-            <input type="text" placeholder="First name *" required />
-            <input type="email" placeholder="Email *" required />
-            <button type="submit" class="btn-subscribe">Subscribe Now!</button>
-          </form>
-        </div>
-      </div>
-    </div>
-  </footer>
+  <footer id="footer" role="contentinfo" data-nav-section="footer">
+		<div class="footer-container">
+		  <div class="footer-row">
+			<!-- Logo and Social Links -->
+			<div class="footer-column">
+				<img src="images/FooterSwingieLogo.svg" alt="Swingie Logo" class="footer-logo-img" />
+			  <ul class="social-links">
+				<li><a href="#"><img src="images/footer/FBLogo.svg" alt="Facebook" class="icon-facebook"></a></li>
+				<li><a href="#"><img src="images/footer/InsLogo.svg" alt="Instagram" class="icon-instagram"></a></li>
+				<li><a href="#"><img src="images/footer/TwitterLogo.svg" alt="Twitter" class="icon-twitter"></a></li>
+				<li><a href="#"><img src="images/footer/GithubLogo.svg" alt="Github" class="icon-github"></a></li>
+				<li><a href="#"><img src="images/footer/DiscordLogo.svg" alt="Discord" class="icon-discord"></a></li>			
+			  </ul>
+			  <ul class="contact-info">
+				<li><a href="#"><img src="images/footer/LinkPic.svg" alt="Link" class="icon-Link">Link</a></li>
+				<li><a href="#"><img src="images/footer/EmailPic.svg" alt="Email" class="icon-Email">Email</a></li>
+				<li><a href="#"><img src="images/footer/AddressPic.svg" alt="Address" class="icon-Address">Address</a></li>
+			  </ul>
+			  <p class="footer-copyright">
+				© 2024 Swingie. All Rights Reserved.<br />
+				Designed by Tiffany Ling
+			  </p>
+			</div>
+	  
+			<!-- Navigation Links -->
+			<div class="footer-column">
+			  <h3>NAVIGATION</h3>
+			  <ul class="footer-links">
+				<li><a href="#home">Home</a></li>
+				<li><a href="#vision-mission">Vision/Mission</a></li>
+				<li><a href="#features">Features</a></li>
+				<li><a href="#ai-in-action">AI in Action</a></li>
+				<li><a href="#pricing">Pricing</a></li>
+				<li><a href="#contact">Contact Us</a></li>
+			  </ul>
+			</div>
+	  
+			<!-- Legal Links -->
+			<div class="footer-column">
+			  <h3>LEGAL</h3>
+			  <ul class="footer-links">
+				<li><a href="#">Privacy & Policy</a></li>
+				<li><a href="#">Terms & Conditions</a></li>
+			  </ul>
+			</div>
+	  
+			<!-- Subscribe Section -->
+			<div class="footer-column">
+			  <h3>SUBSCRIBE TO OUR NEWSLETTER</h3>
+			  <form class="subscribe-form">
+				<ul class="subscribe-newsletter">
+				  <li><a href="#">Fisrt Name *</a></li>
+				</ul>
+				<input type="text" placeholder="" required />
+				<ul class="subscribe-newsletter">
+					<li><a href="#">Email *</a></li>
+				  </ul>
+				<input type="email" placeholder="" required />
+				<button type="submit" class="btn-subscribe">SUBSCRIBE NOW!</button>
+			  </form>
+			</div>
+		  </div>
+		</div>
+	  </footer>
 </body>
 </html>

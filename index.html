@@ -266,8 +266,9 @@ sass sass/style.scss css/style.css -->
 					<li><a href="#">Email *</a></li>
 				  </ul>
 				<input type="email" placeholder="" required />
-				<button type="submit" class="btn-subscribe">Subscribe Now!</button>
+				<button type="submit" class="btn-subscribe">SUBSCRIBE NOW!</button>
 			  </form>
+			  <a href="#top" class="back-to-top">BACK TO TOP</a>
 			</div>
 		  </div>
 		</div>
@@ -301,5 +302,19 @@ sass sass/style.scss css/style.css -->
             row.scrollLeft = scrollPosition;
         }
     });
+
+	document.addEventListener("DOMContentLoaded", function () {
+	const backToTopLink = document.querySelector(".back-to-top");
+
+	backToTopLink.addEventListener("click", function (event) {
+		event.preventDefault(); // Prevent default anchor behavior
+
+		window.scrollTo({
+		top: 0, // Scroll to the top of the page
+		behavior: "smooth", // Enable smooth scrolling
+		});
+	});
+	});
+
 </script>
 
