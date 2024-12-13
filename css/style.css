@@ -600,13 +600,14 @@ body {
   align-items: center;
 }
 #home h1 {
-  font-family: "Arial", sans-serif; /* Change to your preferred font */
-  font-weight: 400; /* Regular font weight */
-  font-size: 50px;
-  line-height: 1.2; /* Adjust line spacing */
   text-align: left; /* Align text to the left */
   margin-bottom: 20px;
-  color: #1a1a1a;
+  color: var(--gray-800, #1F2937);
+  font-family: "Work Sans";
+  font-size: 2.5em;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 64px; /* 128% */
 }
 #home .home-section .line-one {
   font-weight: 700; /* Make the first line bold */
@@ -643,8 +644,12 @@ body {
   background-color: #356a21;
 }
 #home .golf-image {
-  max-width: 65%;
   height: auto;
+}
+@media (min-width: 769px) {
+  #home h1 {
+    margin-top: 120px; /* Apply the 120px margin only on larger screens */
+  }
 }
 @media (max-width: 768px) {
   #home .row {
@@ -652,7 +657,9 @@ body {
     text-align: center;
   }
   #home h1 {
-    font-size: 2.5rem;
+    line-height: 48px;
+    text-align: center;
+    font-size: 2em;
   }
   #home .email-signup {
     flex-direction: column;
@@ -696,17 +703,22 @@ body {
   text-align: left;
 }
 #fh5co-our-services-features h5 {
-  font-size: 17px;
-  color: grey;
   text-align: left;
+  color: var(--gray-500, #6B7280);
+  font-family: "Work Sans";
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 27px; /* 168.75% */
+  letter-spacing: 0.64px;
 }
 #fh5co-our-services-features .row.row-bottom-padded-sm {
   display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
+  justify-content: space-between; /* Ensures the blocks are spaced evenly */
+  column-gap: 80px; /* Adds 80px gap only between the blocks */
 }
 #fh5co-our-services-features .col-md-6 {
-  flex: 1 1 50%;
+  flex: 1 1 calc(50% - 40px); /* Adjust width to fit two blocks side by side, considering the gap */
   display: flex;
   flex-direction: column;
   align-items: center; /* Center the box content */
@@ -750,6 +762,9 @@ body {
   transition: color 0.3s;
 }
 @media screen and (max-width: 768px) {
+  #fh5co-our-services-features .row.row-bottom-padded-sm {
+    flex-wrap: wrap; /* Allow wrapping on smaller screens */
+  }
   #fh5co-our-services-features .col-md-6 {
     flex: 1 1 100%; /* Full-width on smaller screens */
     margin-bottom: 20px;
@@ -763,7 +778,7 @@ body {
 #fh5co-our-services-collaborations {
   padding: 80px 0;
   background-color: #ffffff;
-  /* Responsive Design */
+  /* Mobile View */
 }
 #fh5co-our-services-collaborations .container {
   text-align: center;
@@ -780,7 +795,7 @@ body {
 }
 #fh5co-our-services-collaborations .row {
   display: flex;
-  justify-content: space-evenly; /* Evenly distribute logos */
+  justify-content: center; /* Center logos in the container for desktop view */
   align-items: center;
   gap: 20px; /* Spacing between logos and dividers */
 }
@@ -788,8 +803,7 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
-  flex: 1;
-  max-width: 200px; /* Optional: limit the maximum width of each logo */
+  max-width: 200px; /* Limit the maximum width of each logo */
   margin: 20px;
 }
 #fh5co-our-services-collaborations .collaboration-logo {
@@ -798,48 +812,35 @@ body {
 }
 #fh5co-our-services-collaborations .divider {
   width: 1px;
-  height: 60px; /* Slightly smaller than logo height */
+  height: 60px; /* Adjust height for alignment */
   background-color: #929292; /* Dark grey */
-}
-@media screen and (max-width: 1024px) {
-  #fh5co-our-services-collaborations .logo-container {
-    flex: 1 1 33%; /* Three logos per row */
-  }
 }
 @media screen and (max-width: 768px) {
   #fh5co-our-services-collaborations .row {
-    flex-direction: row; /* Ensure logos are displayed side by side */
-    justify-content: space-evenly; /* Space logos evenly */
-    align-items: center;
+    justify-content: flex-start; /* Align logos horizontally */
+    gap: 20px; /* Spacing between logos and dividers */
+    overflow-x: auto; /* Enable horizontal scrolling */
+    white-space: nowrap; /* Prevent wrapping of logos */
+    padding: 10px; /* Add padding for a smoother scrolling experience */
+    scroll-snap-type: x mandatory; /* Snap to elements when scrolling */
   }
   #fh5co-our-services-collaborations .logo-container {
-    flex: 1; /* Equal flex space for logos */
-    display: flex;
-    justify-content: center; /* Center-align logos */
-    align-items: center;
-    max-width: 80px; /* Limit logo width for mobile view */
-    margin: 10px;
+    flex: 0 0 auto; /* Ensure each logo stays in its own space */
+    max-width: 100px; /* Adjust the max width for mobile */
+    scroll-snap-align: center; /* Ensure smooth snapping to this element */
   }
   #fh5co-our-services-collaborations .collaboration-logo {
-    max-width: 60px; /* Smaller size for logos */
-    height: auto; /* Maintain aspect ratio */
+    max-width: 80px;
+    height: auto;
   }
   #fh5co-our-services-collaborations .divider {
-    width: 1px; /* Vertical line width */
-    height: 60px; /* Adjust height for alignment */
-    background-color: #929292; /* Dark grey color for divider */
-    margin: 0 10px; /* Add spacing around the divider */
-    display: block; /* Ensure divider is visible */
-  }
-}
-@media screen and (max-width: 480px) {
-  #fh5co-our-services-collaborations .collaboration-logo {
-    max-width: 100px;
+    width: 1px;
+    height: 40px; /* Adjust divider height for smaller logos */
   }
 }
 
 #fh5co-our-services-vission {
-  background: url("../images/golferman.png") no-repeat center center;
+  background: url("../images/VisionMissionBG.svg") no-repeat center center;
   background-size: cover; /* Ensure the image covers the entire section */
   padding: 60px 0; /* Add more padding for better spacing */
   position: relative;
@@ -849,8 +850,13 @@ body {
   color: white;
 }
 #fh5co-our-services-vission h5 {
+  color: var(--white, #FFF);
+  text-align: center;
   font-size: 17px;
-  color: white;
+  font-style: normal;
+  font-weight: 300;
+  line-height: 31px; /* 182.353% */
+  letter-spacing: 0.68px;
 }
 #fh5co-our-services-vission::before {
   content: "";
@@ -859,7 +865,6 @@ body {
   left: 0;
   width: 100%;
   height: 100%;
-  background-color: rgba(95, 205, 61, 0.6); /* Green overlay with 60% opacity */
   z-index: 1; /* Place it below the content */
 }
 #fh5co-our-services-vission .row.row-bottom-padded-sm {
@@ -1366,8 +1371,13 @@ body {
 }
 #footer h3 {
   margin-bottom: 20px;
+  color: var(--white, #FFF);
+  font-family: "Work Sans";
   font-size: 16px;
-  color: #ffffff;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  opacity: 0.4;
 }
 #footer a {
   color: white;
