@@ -1632,6 +1632,46 @@ body {
 		.footer-column {
 		  text-align: center;
 		}
+
+		.contact-info {
+			display: flex;
+			flex-direction: column; /* Stack items vertically */
+			align-items: center; /* Center align the items */
+			text-align: center; /* Ensure text is centered */
+			padding: 0;
+			margin: 0;
+		  }
+		
+		  .contact-info li {
+			margin-bottom: 10px; /* Add spacing between items */
+			list-style: none;
+		  }
+		
+		  .contact-info a {
+			display: flex;
+			align-items: center; /* Align icon and text vertically */
+			justify-content: center; /* Center align the content */
+			text-decoration: none;
+			color: #e3f0d8; /* Ensure text color matches the design */
+			font-size: 16px;
+		  }
+		
+		  .contact-info img {
+			margin-right: 8px; /* Add spacing between icon and text */
+			width: 20px; /* Adjust icon size for mobile */
+			height: auto;
+		  }
+		  .footer-row {
+			gap: 0;
+		  }
+		  .footer-column {
+			// border-top: 1px solid #ddd; /* Add a light grey top border */
+			border-bottom: 1px solid #ddd; /* Add a light grey bottom border */
+			// padding-top: 16px; /* Add spacing inside the container */
+			padding-bottom: 16px; /* Add spacing inside the container */
+			margin-top: 0; /* Add spacing between columns */
+			margin-bottom: 0; /* Add spacing between columns */
+		  }
 	  }
 }
 
