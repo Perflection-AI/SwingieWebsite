@@ -295,45 +295,58 @@ sass sass/style.scss css/style.css -->
 	
 	<!-- Email Sign-up Handler -->
 	<script>
-		// Initialize EmailJS (replace 'YOUR_PUBLIC_KEY' with your actual EmailJS public key)
-		emailjs.init("icj_HwgKRS7mFVJ-G");
-		
-		// Handle email sign-up form submission
+		// Wait for EmailJS library to load and DOM to be ready
 		document.addEventListener("DOMContentLoaded", function() {
+			// Check if EmailJS is loaded
+			if (typeof emailjs === 'undefined') {
+				console.error('EmailJS library failed to load');
+				return;
+			}
+			
+			// Initialize EmailJS
+			emailjs.init("OgBxaFwDtbJUZI0X8");
+			
+			// Handle email sign-up form submission
 			const emailSignupForm = document.querySelector('.email-signup');
 			
-			if (emailSignupForm) {
-				emailSignupForm.addEventListener('submit', function(e) {
-					e.preventDefault();
-					
-					const emailInput = emailSignupForm.querySelector('input[type="email"]');
-					const submitButton = emailSignupForm.querySelector('button[type="submit"]');
-					const email = emailInput.value.trim();
-					
-					if (!email) {
-						alert('Please enter a valid email address');
-						return;
-					}
-					
-					submitButton.disabled = true;
-					submitButton.textContent = 'Sending...';
-					
-					// Send email to the user
-					emailjs.send('service_3y7cn3d', 'template_3v96b9h', {
-						to_email: email
-					})
-						.then(function() {
-							alert('Thank you for signing up! Check your email for confirmation.');
-							emailInput.value = '';
-							submitButton.disabled = false;
-							submitButton.textContent = 'SIGN UP';
-						}, function() {
-							alert('Sorry, there was an error. Please try again later.');
-							submitButton.disabled = false;
-							submitButton.textContent = 'SIGN UP';
-						});
-				});
+			if (!emailSignupForm) {
+				console.error('Email signup form not found');
+				return;
 			}
+			
+			emailSignupForm.addEventListener('submit', function(e) {
+				e.preventDefault();
+				
+				const emailInput = emailSignupForm.querySelector('input[type="email"]');
+				const submitButton = emailSignupForm.querySelector('button[type="submit"]');
+				const email = emailInput.value.trim();
+				
+				if (!email) {
+					alert('Please enter a valid email address');
+					return;
+				}
+				
+				submitButton.disabled = true;
+				submitButton.textContent = 'Sending...';
+				
+				// Send email to the user
+				emailjs.send('service_3y7cn3d', 'template_3v96b9h', {
+					to_email: email
+				})
+					.then(function(response) {
+						console.log('SUCCESS!', response.status, response.text);
+						alert('Thank you for signing up! Check your email for confirmation.');
+						emailInput.value = '';
+						submitButton.disabled = false;
+						submitButton.textContent = 'SIGN UP';
+					}, function(error) {
+						console.error('FAILED...', error);
+						console.log('Error details:', JSON.stringify(error, null, 2));
+						alert('Sorry, there was an error. Please check the console for details.');
+						submitButton.disabled = false;
+						submitButton.textContent = 'SIGN UP';
+					});
+			});
 		});
 	</script>
 
