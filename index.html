@@ -295,8 +295,8 @@ sass sass/style.scss css/style.css -->
 	
 	<!-- Email Sign-up Handler -->
 	<script>
-		// Initialize EmailJS - keys replaced by GitHub Actions
-		emailjs.init("{{EMAILJS_PUBLIC_KEY}}");
+		// Initialize EmailJS (replace 'YOUR_PUBLIC_KEY' with your actual EmailJS public key)
+		emailjs.init("icj_HwgKRS7mFVJ-G");
 		
 		// Handle email sign-up form submission
 		document.addEventListener("DOMContentLoaded", function() {
@@ -319,7 +319,7 @@ sass sass/style.scss css/style.css -->
 					submitButton.textContent = 'Sending...';
 					
 					// Send email to the user
-					emailjs.send('{{EMAILJS_SERVICE_ID}}', '{{EMAILJS_TEMPLATE_ID}}', {
+					emailjs.send('service_3y7cn3d', 'template_3v96b9h', {
 						to_email: email
 					})
 						.then(function() {
